@@ -1,0 +1,196 @@
+@txt-normal:#292b29;
+@purple:#7300fc;
+@yellow: #fdc500;
+
+:host(app-email-contato){
+    display: table;
+    height:100%;
+    width:100%;
+}
+
+.sb__form{
+    display: table-cell;
+    vertical-align: middle;
+
+    form{
+        background: #fff;
+        height: auto;
+        border-radius: 5px 0 0 5px;
+        box-shadow: 5px 3px 8px rgba(0, 0, 0, 0.32);
+        margin-left: 10%;
+    }
+
+    .sb__formContent{
+        display: table;
+        width: 90%;
+        margin: 0 auto;
+        box-sizing: border-box;
+
+        .sb__field{
+            display: table;
+            width: 100%;
+            padding:15px 0;
+            position: relative;
+
+            label,input,textarea{
+                display: table;
+                width:100%;
+                max-width:352px;
+                font-family: OpenSans-Regular;
+                color:@txt-normal;
+
+                &.is-invalid{
+                    border-color: #dc3545;
+                }
+
+                &:focus,&:active{
+                    outline: none;
+                }
+            }
+            
+            label{
+                font-size:18px;
+                margin: 10px 0 5px;
+            }
+
+            input{
+                height:36px;
+                border-radius:5px;
+                padding:0 12px;
+                margin:0;
+                border:1px solid @txt-normal;
+                box-shadow: none;
+                box-sizing: border-box;
+            }
+
+            textarea{
+                min-height: 144px;
+                border-radius:5px;
+                padding:12px;
+                margin:0;
+                border:1px solid @txt-normal;
+                box-shadow: none;
+                box-sizing: border-box;
+            }
+
+            button{
+                min-height: 38px;
+                font-size:18px;
+                color:#fff;
+                background-color:@purple;
+                font-family: OpenSans-Regular;
+                border:none;
+                border-radius:5px;
+                min-width: 135px;
+            }
+
+            .sb__fieldError{
+                display: table;
+                position: absolute;
+                bottom: -2px;
+                left: 5px;
+
+                span{
+                    font-size: 11px;
+                    font-family: OpenSans-BoldItalic;
+                    color: #dc3545;
+                }
+
+            }
+
+            
+        }
+    }
+}
+
+@media screen and (max-width:1140px){
+    .sb__form{
+    
+        form{
+            margin-left: 5%;
+        }
+    
+        .sb__formContent{    
+            .sb__field{
+                padding:15px 0;
+                
+                label{
+                    font-size:16px;
+                }
+
+                .sb__fieldError{
+                    bottom: -2px;  
+                }
+    
+                
+            }
+        }
+    }
+}
+
+@media screen and (max-width:700px){
+
+    :host(app-email-contato){
+        width:90%;
+        margin:0 auto;
+    }
+
+    .sb__form{
+        display: initial;
+
+        form{
+            margin-left: 0;
+            border-radius: 10px;
+            box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.32);
+        }
+    
+        .sb__formContent{    
+            .sb__field{
+                padding:15px 0;
+
+                label,input,textarea{
+                    max-width:100%;
+                }
+                
+                label{
+                    font-size:16px;
+                }
+
+                .sb__fieldError{
+                    bottom: -2px;  
+                }
+
+                textarea{
+                    min-height: 100px;
+                }
+    
+                button{
+                    margin:0 auto;
+                    display: table;
+                    font-size:16px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:570px){
+
+    .sb__form{
+    
+        .sb__formContent{    
+            .sb__field{
+                
+                label{
+                    font-size:14px;
+                }
+
+    
+                button{
+                    font-size:14px;
+                }
+            }
+        }
+    }
+
+}

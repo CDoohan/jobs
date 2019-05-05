@@ -1,0 +1,64 @@
+@purple:#7300fc;
+
+.sb__footer{
+    height:400px;
+    display: table;
+    margin:0 auto;
+    text-align: center;
+
+    &>div{
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    figure{
+        margin:20px auto;
+
+        img{
+            display: table;
+            margin: 0 auto;
+        }
+    }
+
+    h4{
+        font-size:27px;
+        font-family: OpenSans-LightItalic;
+        color:@purple;
+        margin:15px 0;
+
+        &::before, &::after{
+            display: inline-block;
+            font-size:inherit;
+            margin:0;
+        }
+    
+        &::before{
+            content: "<";
+        }
+    
+        &::after{
+            content: ">";
+        }
+    }
+
+    h5{
+        font-size:27px;
+        font-family: OpenSans-BoldItalic;
+        color:@purple;
+    }
+}
+
+@media screen and (max-width:700px){
+
+    .sb__footer{    
+        h4{
+            font-size:18px;
+            margin:0 auto;
+        }
+    
+        h5{
+            font-size:18px;
+        }
+    }
+
+}

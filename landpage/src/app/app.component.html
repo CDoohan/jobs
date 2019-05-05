@@ -1,0 +1,296 @@
+<app-header></app-header>
+
+<section class="sb__introduction">
+  <div class="container">
+    <div class="row">
+      <div class="col_7">
+
+        <div class="sb__content">
+            <h1 class="sb__title">
+              a sabion
+            </h1>
+    
+            <h2>
+              "Tornamos o <strong>digital</strong> mais <strong>humano.</strong>"
+            </h2>
+    
+            <h3>
+              A <strong>Sabion</strong> é uma Agência Digital <strong>full service</strong><br> especialista em tecnologia e informação.
+            </h3>
+        </div>
+
+      </div>
+
+      <div class="col_5">
+        <figure>
+          <img src="assets/images/astronaut.png" alt="Sabion - Developer Challenge" />
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sb__jobs">
+  <div class="container">
+
+    <div class="row">
+      <div class="col_12">
+
+          <h1 class="sb__title">
+            somos 360º
+          </h1>
+
+          <ul>
+
+            <li class="sb__item">
+
+              <div>
+
+                <figure>
+                  <img src="assets/images/ia.png" alt="Sabion - Inteligência Artificial">
+                </figure>
+  
+                <h2>
+                  Inteligência Artificial
+                </h2>
+
+              </div>
+
+            </li>
+
+            <li class="sb__item">
+
+                <div>
+                  
+                  <figure>
+                    <img src="assets/images/uxui.png" alt="Sabion - UX/UI  DESIGN">
+                  </figure>
+  
+                  <h2>
+                      UX/UI  DESIGN
+                  </h2>
+  
+                </div>
+  
+            </li>
+
+            <li class="sb__item">
+
+              <div>
+                
+                <figure>
+                  <img src="assets/images/dev.png" alt="Sabion - Desenvolvimento">
+                </figure>
+
+                <h2>
+                  Desenvolvimento
+                </h2>
+
+              </div>
+
+            </li>
+
+            <li class="sb__item">
+
+              <div>
+                
+                <figure>
+                  <img src="assets/images/link.png" alt="Sabion - Links Patrocinados">
+                </figure>
+
+                <h2>
+                  Links Patrocinados
+                </h2>
+
+              </div>
+
+            </li>
+
+            <li class="sb__item">
+
+              <div>
+                
+                <figure>
+                  <img src="assets/images/seo.png" alt="Sabion - SEO">
+                </figure>
+
+                <h2>
+                  SEO
+                </h2>
+
+              </div>
+
+            </li>
+
+            <li class="sb__item">
+
+              <div>
+                
+                <figure>
+                  <img src="assets/images/web.png" alt="Sabion - WEB ANALYTICS / B.I.">
+                </figure>
+
+                <h2>
+                    WEB ANALYTICS / B.I.
+                </h2>
+
+              </div>
+
+            </li>
+
+            <li class="sb__item">
+
+              <div>
+                
+                <figure>
+                  <img src="assets/images/app.png" alt="Sabion - Criação de Apps">
+                </figure>
+
+                <h2>
+                  Criação de Apps
+                </h2>
+
+              </div>
+
+            </li>
+
+            <li class="sb__item">
+
+              <div>
+                
+                <figure>
+                  <img src="assets/images/campanha.png" alt="Sabion - Campanhas">
+                </figure>
+
+                <h2>
+                  Campanhas
+                </h2>
+
+              </div>
+
+            </li>
+
+            <li class="sb__item">
+
+              <div>
+                
+                <figure>
+                  <img src="assets/images/social.png" alt="Sabion - Redes Sociais">
+                </figure>
+
+                <h2>
+                  Redes Sociais
+                </h2>
+
+              </div>
+
+            </li>
+
+          </ul>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="sb__create">
+  <div class="container">
+
+    <div class="row">
+      <div class="col_12">
+
+        <h1>
+          criamos <strong>experiências</strong>
+        </h1>
+
+        <ul class="sb__choose" >
+
+          <li [ngClass]="{ 'select': color == 'all' }" (click)="changeColor()">
+            <h2>
+              All
+            </h2>
+          </li>
+
+          <li [ngClass]="{ 'select': color == 'purple' }" (click)="changeColor('purple')">
+            <h2>
+              purple
+            </h2>
+          </li>
+
+          <li [ngClass]="{ 'select': color == 'yellow' }" (click)="changeColor('yellow')">
+            <h2>
+              yellow
+            </h2>
+          </li>
+
+          <li [ngClass]="{ 'select': color == 'grey' }" (click)="changeColor('grey')">
+            <h2>
+              grey
+            </h2>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col_12">
+
+        <ul class="sb__colors" [ngClass]="changeColor(color)">
+
+          <li class="sb__block sb__purple"></li>
+          <li class="sb__block sb__yellow"></li>
+          <li class="sb__block sb__purple"></li>
+          <li class="sb__block sb__gray"></li>
+          <li class="sb__block sb__yellow"></li>
+          <li class="sb__block sb__gray"></li>
+          <li class="sb__block sb__purple"></li>
+          <li class="sb__block sb__yellow"></li>
+          <li class="sb__block sb__gray"></li>
+          <li class="sb__block sb__purple"></li>
+          <li class="sb__block sb__gray"></li>
+          <li class="sb__block sb__purple"></li>
+
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sb__contact">
+
+    <div class="row">
+
+      <div class="col_6">
+        
+        <div class="sb__info">
+          <h1>
+            Como podemos<br> te ajudar?
+          </h1>
+
+          <h2>
+            Entre em contato  com um de<br>
+            nossos especialistas para que<br>
+            encontremos uma solução
+          </h2>
+
+        </div>
+
+      </div>
+
+      <div class="col_6">
+
+        <app-email-contato></app-email-contato>
+
+      </div>
+
+    </div>
+
+</section>
+
+<app-footer></app-footer>
+
+<router-outlet></router-outlet>

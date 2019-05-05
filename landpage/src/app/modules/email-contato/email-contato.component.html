@@ -1,0 +1,66 @@
+<div class="sb__form">
+
+  <form [formGroup]="formContato" (ngSubmit)="handleEnviarEmail()">
+    <div class="sb__formContent">
+
+      <div class="sb__field">
+
+        <label>
+          Nome
+        </label>
+        <input placeholder="Seu nome" formControlName="nome" type="text" name="nome" [ngClass]="{ 'is-invalid': submitted && formContato.get('nome').errors }" required> 
+
+        <div class="sb__fieldError" *ngIf="submitted && formContato.get('nome').errors">
+
+          <span *ngIf="formContato.get('nome').errors.required"> 
+            Informar um nome é obrigatório
+          </span>
+
+        </div>
+
+      </div>
+
+      <div class="sb__field">
+        <label>
+          Email
+        </label>
+        <input placeholder="Seu email" formControlName="email" type="email" [ngClass]="{ 'is-invalid': submitted && formContato.get('email').errors }" name="email" required>
+
+        <div class="sb__fieldError" *ngIf=" submitted && formContato.get('email').errors">
+
+          <span *ngIf="formContato.get('email').errors.required">
+            Informar um Email é obrigatório
+          </span>
+
+          <span *ngIf="formContato.get('email').errors.email">
+            Informe um Email valido
+          </span>
+          
+        </div>
+      </div>
+
+      <div class="sb__field">
+
+        <label>
+          Mensagem
+        </label>
+
+        <textarea placeholder="Sua mensagem" formControlName="mensagem" name="mensagem" [ngClass]="{ 'is-invalid': submitted && formContato.get('mensagem').errors }"></textarea>
+
+        <div class="sb__fieldError" *ngIf=" submitted && formContato.get('mensagem').errors">
+
+          <span *ngIf="formContato.get('mensagem').errors.required">
+            Informar uma Mensagem é obrigatório
+          </span>
+          
+        </div>
+
+      </div>
+
+      <div class="sb__field">
+        <button title="Enviar">Enviar</button>
+      </div>
+
+    </div>
+  </form>
+</div>
